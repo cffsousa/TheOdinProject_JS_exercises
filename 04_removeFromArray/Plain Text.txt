@@ -1,0 +1,21 @@
+const removeFromArray = function (chosenArray, j1, j2, j3, j4) {
+    let p = -1;
+    let argumentsCopy = null;
+
+    while (++p < arguments.length) {
+        argumentsCopy = arguments[p];
+    }
+    for (let i = 1, j = argumentsCopy.length; i < j; i++) {
+        if (chosenArray.includes(argumentsCopy[i]) === true) {
+
+            let index = chosenArray.indexOf(argumentsCopy[i]);
+            chosenArray.splice(index, 1);
+            return chosenArray;
+        } else {
+            return chosenArray;
+        }
+    }
+
+}
+
+module.exports = removeFromArray;
